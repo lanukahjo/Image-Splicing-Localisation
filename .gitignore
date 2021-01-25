@@ -1,4 +1,4 @@
-/ImSpliceDataset
 /.ipynb_checkpoints
-/output
 /.vscode
+/Dataset
+/__pycache__
