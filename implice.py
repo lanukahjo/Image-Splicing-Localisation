@@ -77,8 +77,8 @@ def localise_spliced_area(PATH_TO_AUTHENTIC_IMG,PATH_TO_SPLICED_IMG,THRESHOLD=0.
                                         normed = True);
             glcm_matrix_spl = glcm_matrix_spl[:,:,0,0]
         
-            #glcm_matrix_auth = softmax(glcm_matrix_auth)
-            #glcm_matrix_spl = softmax(glcm_matrix_spl)
+            glcm_matrix_auth = softmax(glcm_matrix_auth)
+            glcm_matrix_spl = softmax(glcm_matrix_spl)
             #Calculate different distances
             hellinger_distance = getHellingerDistance(glcm_matrix_auth, glcm_matrix_spl);
             euclidean_distance = getEuclideanDistance(glcm_matrix_auth, glcm_matrix_spl);

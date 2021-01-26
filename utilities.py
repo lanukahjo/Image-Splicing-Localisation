@@ -17,5 +17,7 @@ def getMinkowskiDistance(x, y, p):
     return minkowski_distance;
 
 #Get the normalised form of matrix as exponential distribution
-def softmax(scores):
-    return np.exp(scores)/np.sum(np.exp(scores))
+def softmax(matrix):
+    mu = np.mean(matrix)
+    sigma = np.std(matrix)
+    return 1/(sigma * np.sqrt(np.pi * 2)) * np.exp(-0.5 * np.square((matrix-mu)/sigma))
