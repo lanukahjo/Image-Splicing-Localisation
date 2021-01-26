@@ -48,7 +48,6 @@ for i in range(1,181):
     else:
         spliced_img[splice_strip_end : splice_strip_end + splice_strip_width,0:img_width] = authentic_img[splice_strip_begin : splice_strip_begin + splice_strip_width,0:img_width]
 
-
     #These four varibles refer to 4 lines which act as a bounding box for spliced region. They are stored in a csv file
     if (is_horizontal_splicing == False):
         spliced_row_begin = 0

@@ -99,6 +99,13 @@ def localise_spliced_area(PATH_TO_AUTHENTIC_IMG,PATH_TO_SPLICED_IMG,THRESHOLD=0.
     hell_dist_mat = hell_dist_mat / np.max(hell_dist_mat)
     minkowski_dist_mat = minkowski_dist_mat / np.max(minkowski_dist_mat);
 
+
+
+    #changing the datatype from default uint8 to allow marking the spliced region with value 300
+    output_img_euclidean_dist = np.uint16(output_img_euclidean_dist)
+    output_img_hellinger_dist = np.uint16(output_img_hellinger_dist)
+    output_img_minkowski_dist = np.uint16(output_img_minkowski_dist)
+
     #The blocks for which the textural difference is greater than threshold is painted white
 
     for i in range(0, dist_mat_height):
@@ -106,13 +113,13 @@ def localise_spliced_area(PATH_TO_AUTHENTIC_IMG,PATH_TO_SPLICED_IMG,THRESHOLD=0.
         
             if (euc_dist_mat[i,j] > THRESHOLD):
                 output_img_euclidean_dist[i * STEP_SIZE : i * STEP_SIZE + BLOCK_SIZE, 
-                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = -1 * np.ones((BLOCK_SIZE, BLOCK_SIZE))
+                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = 300 * np.ones((BLOCK_SIZE, BLOCK_SIZE))
             if (hell_dist_mat[i,j] > THRESHOLD):
                 output_img_hellinger_dist[i * STEP_SIZE : i * STEP_SIZE + BLOCK_SIZE,
-                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = -1 * np.ones((BLOCK_SIZE, BLOCK_SIZE))
+                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = 300 * np.ones((BLOCK_SIZE, BLOCK_SIZE))
             if (minkowski_dist_mat[i,j] > THRESHOLD):
                 output_img_minkowski_dist[i * STEP_SIZE : i * STEP_SIZE + BLOCK_SIZE,
-                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = -1*np.ones((BLOCK_SIZE, BLOCK_SIZE))
+                                        j * STEP_SIZE : j * STEP_SIZE + BLOCK_SIZE] = 300*np.ones((BLOCK_SIZE, BLOCK_SIZE))
     
     return (output_img_euclidean_dist,output_img_hellinger_dist,output_img_minkowski_dist)
 
@@ -123,7 +130,7 @@ def paint_in_white(matrix):
 
     for i in range(0,height):
         for j in range(0,width):
-            if (matrix[i,j] == -1):
+            if (matrix[i,j] == 300):
                 matrix[i,j] = 255
 
     return matrix
