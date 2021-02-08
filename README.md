@@ -1,3 +1,3 @@
-# Image-Splicing-Localisation
+# Image Splicing Detection and Localization using Digital Forensics
 
-This is part of Major Project for B.Tech 4th Year.
+BTech 8th Semester Project (IT871)
