@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-/.ipynb_checkpoints
-/.vscode
-/Dataset
-/__pycache__
-/Output
-=======
 ImSpliceDataset/
 .ipynb_checkpoints/
 output/
 .vscode/
->>>>>>> ca67fefe2b2bf3b6ab7f14392bc1204e7b85c31d
+Dataset/
+__pycache__/
