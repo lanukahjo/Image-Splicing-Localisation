@@ -1,0 +1,11 @@
+write_files = True
+write_superpixels = False
+shrink_superpixels = False
+
+dir = 'images/7'
+fname_orig = 'original'
+fname_spl = 'spliced'
+ext = 'png'
+
+n_superpixels = 200
+n_clusters = 2
