@@ -8,4 +8,3 @@ fname_spl = 'spliced-1'
 ext = 'png'
 
 n_superpixels = 100
-n_clusters = 2

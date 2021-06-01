@@ -2,7 +2,7 @@ write_files = True
 write_superpixels = False
 shrink_superpixels = False
 
-dir = 'images/4'
+dir = 'images/1'
 fname_orig = 'original'
 fname_spl = 'spliced'
 ext = 'png'
