@@ -1,0 +1,12 @@
+rows: 680
+cols: 906
+total: 616080
+
+true positives: 2731
+false positives: 553978
+true negatives: 11324
+false negatives: 48047
+
+precision: 0.004905614962215448
+recall: 0.05378313442829572
+f_1 score: 0.008991138905030066
