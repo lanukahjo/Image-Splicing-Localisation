@@ -1,6 +1,7 @@
 ImSpliceDataset/
 .ipynb_checkpoints/
 output/
+.DS_Store
 .vscode/
 Dataset/
 __pycache__/
