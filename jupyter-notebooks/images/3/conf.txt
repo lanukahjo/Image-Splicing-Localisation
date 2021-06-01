@@ -1,6 +1,6 @@
 write_files = True
 write_superpixels = False
-shrink_superpixels = False
+shrink_superpixels = True
 
 dir = 'images/3'
 fname_orig = 'original'
